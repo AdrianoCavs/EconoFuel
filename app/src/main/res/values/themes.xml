@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EconoFuel" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green_fuel</item>
+
+
+    </style>
+
+
+    <style name="Theme.EconoFuel" parent="Base.Theme.EconoFuel"/>
+
+
+</resources>
+
+
+<!-->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/background_pattern_fuel_pipeline"
+    android:tileMode="repeat"
+    android:antialias="true"
+    />
+
+</-->

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_repeat">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:scaleType="matrix"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvFuelConsumption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text="Fuel 1 consumption:"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFuelConsumption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text="Fuel 2 consumption:"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvFuelConsumption1"
+            app:layout_constraintTop_toBottomOf="@+id/tvFuelConsumption1" />
+
+        <TextView
+            android:id="@+id/tvFuelValue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text="Fuel 1 cost:"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvFuelConsumption2"
+            app:layout_constraintTop_toBottomOf="@+id/tvFuelConsumption2" />
+
+        <TextView
+            android:id="@+id/tvFuelValue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text="Fuel 2 cost:"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvFuelValue1"
+            app:layout_constraintTop_toBottomOf="@+id/tvFuelValue1" />
+
+
+        <Button
+            android:id="@+id/btSelectFuel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select..."
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/etFuelConsumption1"
+            app:layout_constraintTop_toTopOf="@+id/etFuelConsumption1" />
+
+        <Button
+            android:id="@+id/btSelectFuel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select..."
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/etFuelConsumption2"
+            app:layout_constraintStart_toStartOf="@+id/btSelectFuel1"
+            app:layout_constraintTop_toBottomOf="@+id/etFuelConsumption1" />
+
+        <Button
+            android:id="@+id/btCalculateFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="CHECK THE BEST FUEL"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFuelValue2"
+            app:srcCompat="@drawable/icon_econofuel_no_background" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etFuelConsumption1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFuelConsumption1"
+            app:layout_constraintEnd_toStartOf="@+id/btSelectFuel1"
+            app:layout_constraintStart_toEndOf="@+id/tvFuelConsumption1"
+            app:layout_constraintTop_toTopOf="@+id/tvFuelConsumption1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="mpg"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etFuelConsumption2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFuelConsumption2"
+            app:layout_constraintStart_toStartOf="@+id/etFuelConsumption1"
+            app:layout_constraintTop_toTopOf="@+id/tvFuelConsumption2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="mpg"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFuelValue1"
+            app:layout_constraintStart_toStartOf="@+id/etFuelConsumption2"
+            app:layout_constraintTop_toTopOf="@+id/tvFuelValue1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFuelCost1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="US$"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFuelValue2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toTopOf="@+id/tvFuelValue2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFuelCost2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="US$"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
