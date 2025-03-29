@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_repeat"
-    android:orientation="horizontal">
+    android:background="@drawable/background_repeat">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:scaleType="matrix"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,6 +18,7 @@
             android:id="@+id/tvFuelConsumption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:padding="16dp"
             android:text="Fuel 1 consumption:"
@@ -63,9 +64,11 @@
             android:id="@+id/btSelectFuel1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:text="Select..."
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tlFuelConsumption1"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/tlFuelConsumption1"
             app:layout_constraintTop_toTopOf="@+id/tlFuelConsumption1" />
 
@@ -77,13 +80,13 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/tlFuelConsumption2"
             app:layout_constraintStart_toStartOf="@+id/btSelectFuel1"
-            app:layout_constraintTop_toBottomOf="@+id/tlFuelConsumption1" />
+            app:layout_constraintTop_toTopOf="@+id/tlFuelConsumption2" />
 
         <Button
             android:id="@+id/btCalculateFuel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="CHECK THE BEST FUEL"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,11 +97,9 @@
             android:id="@+id/imageView"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:layout_marginTop="16dp"
             android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvFuelValue2"
+            app:layout_constraintStart_toEndOf="@+id/btSelectFuel1"
+            app:layout_constraintTop_toTopOf="@+id/btSelectFuel1"
             app:srcCompat="@drawable/icon_econofuel_no_background" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -111,11 +112,9 @@
             app:layout_constraintTop_toTopOf="@+id/tvFuelConsumption1">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etFuelConsumption1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="mpg"
-                android:inputType="numberDecimal"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,11 +127,9 @@
             app:layout_constraintTop_toTopOf="@+id/tvFuelConsumption2">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etFuelConsumption2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="mpg"
-                android:inputType="numberDecimal"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -149,12 +146,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="US$"
-                android:inputType="numberDecimal"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tlFuelCost2"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/tvFuelValue2"
@@ -166,7 +161,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="US$"
-                android:inputType="numberDecimal"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
