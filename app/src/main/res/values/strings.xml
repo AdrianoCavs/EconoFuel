@@ -22,6 +22,6 @@
     <string name="ok">OK</string>
     <string name="fuel_1_better">Using Fuel 1 is better\nIn this case refueling with Fuel 1 will be about %s%% more efficient</string>
     <string name="fuel_2_better">Using Fuel 2 is better\ntIn this case refueling with Fuel 2 will be about %s%% more efficient</string>
-    <string name="no_difference">The difference on efficiency of the fuels is about 0%, so there will be no relevant difference on savings</string>
+    <string name="no_difference">The difference on efficiency of the fuels is about 0%, so there will be no relevant difference on savings whatever fuel you choose</string>
 
 </resources>

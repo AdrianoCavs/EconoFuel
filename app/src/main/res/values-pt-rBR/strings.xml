@@ -23,5 +23,5 @@
     <string name="ok">OK</string>
     <string name="fuel_1_better">Usar o Combustível 1 será melhor\nNeste caso, abastecer com o Combustível 1 será cerca de %s%% mais eficiente</string>
     <string name="fuel_2_better">Usar o Combustível 2 será melhor\nNeste caso, abastecer com o Combustível 2 será cerca de %s%% mais eficiente</string>
-    <string name="no_difference">A diferença aproximada entre os dois combustíveis foi de 0%, então não haverá diferença relevante no gasto com abastecimento</string>
+    <string name="no_difference">A diferença aproximada entre os dois combustíveis foi de 0%, então não haverá diferença relevante no gasto com abastecimento independente do combustível escolhido</string>
 </resources>
