@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EconoFuel</string>
+    <string name="fuel_1_cost">Preço combustível 1:</string>
+    <string name="fuel_2_cost">Preço combustível 2:</string>
+    <string name="select">Selecionar…</string>
+    <string name="check_the_best_fuel">CALCULAR MELHOR COMBUSTÍVEL</string>
+    <string name="mpg">km/l</string>
+    <string name="money_string">R$</string>
+    <string name="fuel_1_consumption">Autonomia combust. 1:</string>
+    <string name="fuel_2_consumption">Autonomia combust. 2:</string>
+    <string name="application_logo">Logo da aplicação</string>
+    <string name="gasoline_consumption">Autonomia gasolina:</string>
+    <string name="ethanol_consumption">Autonomia etanol:</string>
+    <string name="gasoline_cost">Preço gasolina:</string>
+    <string name="ethanol_cost">Preço etanol:</string>
+    <string name="empty_field">Preencha todos os campos</string>
+    <string name="no_fuel_specified">Nenhum combustível foi especificado utilizando os botões "selecionar…"\nEntão Combustível 1 e Combustível 2 serão utilizados, respectivamente para os cálculos necessários</string>
+    <string name="result">Resultado</string>
+    <string name="gasoline_better">Usar gasolina será melhor\nNeste caso, abastecer com gasolina será cerca de %s%% mais eficiente</string>
+    <string name="ethanol_better">Usar etanol será melhor\nNeste caso, abastecer com etanol será cerca de %s%% mais eficiente</string>
+    <string name="notice">Aviso</string>
+    <string name="ok">OK</string>
+    <string name="fuel_1_better">Usar o Combustível 1 será melhor\nNeste caso, abastecer com o Combustível 1 será cerca de %s%% mais eficiente</string>
+    <string name="fuel_2_better">Usar o Combustível 2 será melhor\nNeste caso, abastecer com o Combustível 2 será cerca de %s%% mais eficiente</string>
+    <string name="no_difference">A diferença aproximada entre os dois combustíveis foi de 0%, então não haverá diferença relevante no gasto com abastecimento</string>
+</resources>

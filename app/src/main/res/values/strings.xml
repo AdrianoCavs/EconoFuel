@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">EconoFuel</string>
+    <string name="fuel_1_cost">Fuel 1 price:</string>
+    <string name="fuel_2_cost">Fuel 2 price:</string>
+    <string name="select">Select...</string>
+    <string name="check_the_best_fuel">CHECK THE BEST FUEL</string>
+    <string name="mpg">mpg</string>
+    <string name="money_string">US$</string>
+    <string name="fuel_2_consumption">Fuel 2 consumption:</string>
+    <string name="fuel_1_consumption">Fuel 1 consumption:</string>
+    <string name="application_logo">Application logo</string>
+    <string name="gasoline_consumption">Gasoline consumption:</string>
+    <string name="ethanol_consumption">Ethanol consumption:</string>
+    <string name="gasoline_cost">Gasoline price:</string>
+    <string name="ethanol_cost">Ethanol price:</string>
+    <string name="empty_field">Fill all fields in order to calculate which fuel is better</string>
+    <string name="no_fuel_specified">No fuel was specified using the \"select…\" buttons\nSo a generic Fuel 1 and Fuel 2 will be used, respectively, for calculations</string>
+    <string name="result">Result</string>
+    <string name="ethanol_better">Using ethanol is better\nIn this case refueling with ethanol will be about %s%% more efficient</string>
+    <string name="gasoline_better">Using gasoline is better\nIn this case refueling with gasoline will be about %s%% more efficient</string>
+    <string name="notice">Notice</string>
+    <string name="ok">OK</string>
+    <string name="fuel_1_better">Using Fuel 1 is better\nIn this case refueling with Fuel 1 will be about %s%% more efficient</string>
+    <string name="fuel_2_better">Using Fuel 2 is better\ntIn this case refueling with Fuel 2 will be about %s%% more efficient</string>
+    <string name="no_difference">The difference on efficiency of the fuels is about 0%, so there will be no relevant difference on savings</string>
+
 </resources>

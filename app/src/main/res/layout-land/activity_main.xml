@@ -21,7 +21,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Fuel 1 consumption:"
+            android:text="@string/fuel_1_consumption"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Fuel 2 consumption:"
+            android:text="@string/fuel_2_consumption"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvFuelConsumption1"
             app:layout_constraintTop_toBottomOf="@+id/tvFuelConsumption1" />
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Fuel 1 cost:"
+            android:text="@string/fuel_1_cost"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvFuelConsumption2"
             app:layout_constraintTop_toBottomOf="@+id/tvFuelConsumption2" />
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Fuel 2 cost:"
+            android:text="@string/fuel_2_cost"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvFuelValue1"
             app:layout_constraintTop_toBottomOf="@+id/tvFuelValue1" />
@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Select..."
+            android:text="@string/select"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/tlFuelConsumption1"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -76,7 +76,7 @@
             android:id="@+id/btSelectFuel2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select..."
+            android:text="@string/select"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/tlFuelConsumption2"
             app:layout_constraintStart_toStartOf="@+id/btSelectFuel1"
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="CHECK THE BEST FUEL"
+            android:text="@string/check_the_best_fuel"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +97,7 @@
             android:id="@+id/imageView"
             android:layout_width="250dp"
             android:layout_height="250dp"
+            android:contentDescription="@string/application_logo"
             android:scaleType="fitXY"
             app:layout_constraintStart_toEndOf="@+id/btSelectFuel1"
             app:layout_constraintTop_toTopOf="@+id/btSelectFuel1"
@@ -114,7 +115,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="mpg"
+                android:hint="@string/mpg"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +130,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="mpg"
+                android:hint="@string/mpg"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +146,7 @@
                 android:id="@+id/etFuelCost1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="US$"
+                android:hint="@string/money_string"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -160,7 +161,7 @@
                 android:id="@+id/etFuelCost2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="US$"
+                android:hint="@string/money_string"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
