@@ -113,10 +113,13 @@
             app:layout_constraintTop_toTopOf="@+id/tvFuelConsumption1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFuelConsumption1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mpg"
-                android:textSize="14sp" />
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:digits="0123456789.,"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -128,10 +131,13 @@
             app:layout_constraintTop_toTopOf="@+id/tvFuelConsumption2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFuelConsumption2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mpg"
-                android:textSize="14sp" />
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:digits="0123456789.,"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -147,7 +153,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/money_string"
-                android:textSize="14sp" />
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:digits="0123456789.,"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -162,7 +170,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/money_string"
-                android:textSize="14sp" />
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:digits="0123456789.,"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
