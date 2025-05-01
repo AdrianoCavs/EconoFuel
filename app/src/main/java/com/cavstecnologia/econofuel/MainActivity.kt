@@ -3,6 +3,8 @@ package com.cavstecnologia.econofuel
 import android.R.id.input
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.text.method.DigitsKeyListener
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 import com.cavstecnologia.econofuel.databinding.ActivityMainBinding
 import java.text.DecimalFormatSymbols
 import kotlin.math.roundToInt
@@ -46,17 +49,25 @@ class MainActivity : AppCompatActivity() {
             btSelectFuelOnClick();
         }
 
+
+//        binding.etFuelConsumption1.addTextChangedListener(){
+//            fun afterTextChanged(editable: Editable){
+//                if(editable.toString().contains(separator)) binding.etFuelConsumption1.keyListener = DigitsKeyListener.getInstance("0123456789");
+//                else binding.etFuelConsumption1.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
+//            }
+//        };
+
         //pega o separador de decimais de acordo com o locale e limita a digitação de caracteres no edittext
         //val separator: Char = DecimalFormatSymbols.getInstance().decimalSeparator;
-        binding.etFuelConsumption1?.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
-        binding.etFuelConsumption2?.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
+
+        binding.etFuelConsumption1.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
+        binding.etFuelConsumption2.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
         binding.etFuelCost1.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
         binding.etFuelCost2.keyListener = DigitsKeyListener.getInstance("0123456789" + separator);
 
-        //binding.etFuelConsumption1.
         binding.btCalculateFuel.setOnClickListener {
-            var fuelConsumption1 : String = binding.etFuelConsumption1?.text.toString().trim().replace(",", ".");
-            var fuelConsumption2 : String = binding.etFuelConsumption2?.text.toString().trim().replace(",", ".");
+            var fuelConsumption1 : String = binding.etFuelConsumption1.text.toString().trim().replace(",", ".");
+            var fuelConsumption2 : String = binding.etFuelConsumption2.text.toString().trim().replace(",", ".");
             var fuelCost1 : String = binding.etFuelCost1.text.toString().trim().replace(",", ".");
             var fuelCost2 : String = binding.etFuelCost2.text.toString().trim().replace(",", ".");
 
@@ -66,14 +77,14 @@ class MainActivity : AppCompatActivity() {
                 if(firstFuel <= 1){ //se o primeiro combustível for gasolina ou não tiver sido selecionado
                     val gasolinePrice : Double = binding.etFuelCost1.text.toString().trim().replace(",", ".").toDouble();
                     val ethanolPrice : Double = binding.etFuelCost2.text.toString().trim().replace(",", ".").toDouble();
-                    val gasolineAutonomy : Double = binding.etFuelConsumption1?.text.toString().trim().replace(",", ".").toDouble();
-                    val ethanolAutonomy : Double = binding.etFuelConsumption2?.text.toString().trim().replace(",", ".").toDouble();
+                    val gasolineAutonomy : Double = binding.etFuelConsumption1.text.toString().trim().replace(",", ".").toDouble();
+                    val ethanolAutonomy : Double = binding.etFuelConsumption2.text.toString().trim().replace(",", ".").toDouble();
                     calculateBestFuel(gasolinePrice, ethanolPrice,gasolineAutonomy, ethanolAutonomy);
                 }else if (firstFuel == 2){ //se o primeiro combustível for etanol
                     val gasolinePrice : Double = binding.etFuelCost2.text.toString().trim().replace(",", ".").toDouble();
                     val ethanolPrice : Double = binding.etFuelCost1.text.toString().trim().replace(",", ".").toDouble();
-                    val gasolineAutonomy : Double = binding.etFuelConsumption2?.text.toString().trim().replace(",", ".").toDouble();
-                    val ethanolAutonomy : Double = binding.etFuelConsumption1?.text.toString().trim().replace(",", ".").toDouble();
+                    val gasolineAutonomy : Double = binding.etFuelConsumption2.text.toString().trim().replace(",", ".").toDouble();
+                    val ethanolAutonomy : Double = binding.etFuelConsumption1.text.toString().trim().replace(",", ".").toDouble();
                     calculateBestFuel(gasolinePrice, ethanolPrice,gasolineAutonomy, ethanolAutonomy);
                 }
             }
